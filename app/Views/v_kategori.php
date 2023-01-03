@@ -98,7 +98,7 @@
 
                     <div class="form-group">
                         <label>Status</label>
-                        <input type="text" name="status" class="form-control">
+                        <input type="checkbox" name="status" value="1" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
@@ -135,9 +135,13 @@
                             placeholder="Kategori" required>
                     </div>
                     <div class="form-group">
-                        <label for="">Status</label>
-                        <input name="status" value="<?= $value['status'] ?>" class="form-control"
-                            placeholder="Kategori" required>
+                        <label for="">Status</label>                     
+                        <input type="checkbox" name="status" 
+                        <?php if($value['status'] == 1){
+                            echo 'checked="checked"'; 
+                        } else($value['status'] == 0)
+                        ?> value="<?= $value['status'] ?>" class="form-control"
+                            placeholder="status" required>
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
