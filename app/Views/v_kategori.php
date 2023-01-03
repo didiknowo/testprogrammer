@@ -38,6 +38,7 @@
                                 <th width="5px">NO</th>
                                 <th>ID Kategori</th>
                                 <th>Kategori</th>
+                                <th>Status</th>
                                 <th width="10%">Aksi</th>
                             </tr>
 
@@ -49,6 +50,7 @@
                                 <td><?= $no++; ?></td>
                                 <td><?= $value['kategori_id'] ?></td>
                                 <td><?= $value['kategori'] ?></td>
+                                <td><?= $value['status'] ?></td>
 
                                 <td class="text-center">
                                     <div class="btn btn-warning btn-sm btn-flat" data-toggle="modal"
@@ -93,6 +95,11 @@
                         <label>Kategori</label>
                         <input type="text" name="kategori" class="form-control">
                     </div>
+
+                    <div class="form-group">
+                        <label>Status</label>
+                        <input type="text" name="status" class="form-control">
+                    </div>
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
@@ -125,6 +132,11 @@
                     <div class="form-group">
                         <label for="">Kategori</label>
                         <input name="kategori" value="<?= $value['kategori'] ?>" class="form-control"
+                            placeholder="Kategori" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Status</label>
+                        <input name="status" value="<?= $value['status'] ?>" class="form-control"
                             placeholder="Kategori" required>
                     </div>
                 </div>

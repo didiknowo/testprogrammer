@@ -37,7 +37,8 @@ class ManajemenKategori extends BaseController
     {
         $data = [
             'kategori_id' => $this->request->getpost('kategori_id'),
-            'kategori' => $this->request->getpost('kategori')
+            'kategori' => $this->request->getpost('kategori'),
+            'status' => $this->request->getpost('status')
         ];
 
         $this->ModelKategori->tambahdata($data);
@@ -49,7 +50,8 @@ class ManajemenKategori extends BaseController
     {
         $data = [
             'kategori_id' => $kategori_id,
-            'kategori' => $this->request->getpost('kategori')
+            'kategori' => $this->request->getpost('kategori'),
+            'status' => $this->request->getpost('status')
         ];
 
         $this->ModelKategori->updatedata($data);
