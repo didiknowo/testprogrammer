@@ -136,9 +136,8 @@
                     </div>
                     <div class="form-group">
                         <label for="">Status</label>                     
-                        <input type="checkbox" name="status" 
-                        <?php if($value['status'] == 1) echo 'checked="checked"'; ?> value="<?= $value['status'] ?>" class="form-control"
-                            placeholder="status" required>
+                        <input type="checkbox" name="status" <?php if($value['status'] == 1) echo 'checked="checked"'; ?> value="<?= $value['status'] ?>" 
+                            class="form-control" placeholder="status" required>
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
